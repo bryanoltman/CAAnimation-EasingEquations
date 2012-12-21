@@ -1,15 +1,15 @@
 CAAnimation-EasingEquations
 ===========================
 
-A category on CAAnimation that provides a number of easing equations to add some zazz to your app (with examples!)
+A category on `CAAnimation` that provides a number of easing equations to add some zazz to your app (with examples!)
 
 ## To use
-- Link your build target with QuartzCore
+- Link your build target with `QuartzCore`
 	- Select your project in Xcode's project navigator
 	- Select your project's target
 	- Navigate to "Build Phases"
 	- In the "Link Binary with Libraries" section, click the '+' button
-	- Select QuartzCore and click "Add"
+	- Select `QuartzCore` and click "Add"
 - Add `CAAnimation+EasingEquations.h` and `CAAnimation+EasingEquations.m` to your project
 - Enjoy!
 
