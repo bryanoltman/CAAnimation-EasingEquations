@@ -10,7 +10,10 @@
 
 @interface OKViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property (strong, nonatomic) NSArray *easingFunctionNames;
+
 @property (weak, nonatomic) IBOutlet UIView *animatedView;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 
 - (IBAction)playButtonClicked:(id)sender;
 
