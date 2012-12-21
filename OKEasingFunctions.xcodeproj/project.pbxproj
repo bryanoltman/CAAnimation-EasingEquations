@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED5D371A168403A30073DA10 /* CAAnimation+EasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5D3719168403A30073DA10 /* CAAnimation+EasingEquations.m */; };
 		EDAF31841681799D000A62D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAF31831681799D000A62D9 /* UIKit.framework */; };
 		EDAF31861681799D000A62D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAF31851681799D000A62D9 /* Foundation.framework */; };
 		EDAF31881681799D000A62D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAF31871681799D000A62D9 /* CoreGraphics.framework */; };
@@ -18,11 +19,12 @@
 		EDAF319A1681799D000A62D9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EDAF31991681799D000A62D9 /* Default-568h@2x.png */; };
 		EDAF319D1681799D000A62D9 /* OKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF319C1681799D000A62D9 /* OKViewController.m */; };
 		EDAF31A01681799D000A62D9 /* OKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAF319E1681799D000A62D9 /* OKViewController.xib */; };
-		EDAF31A8168179B4000A62D9 /* CAAnimation+EasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF31A7168179B4000A62D9 /* CAAnimation+EasingEquations.m */; };
 		EDAF31AA168179C6000A62D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAF31A9168179C6000A62D9 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED5D3718168403A30073DA10 /* CAAnimation+EasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+EasingEquations.h"; sourceTree = SOURCE_ROOT; };
+		ED5D3719168403A30073DA10 /* CAAnimation+EasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+EasingEquations.m"; sourceTree = SOURCE_ROOT; };
 		EDAF317F1681799D000A62D9 /* OKEasingFunctions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OKEasingFunctions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAF31831681799D000A62D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EDAF31851681799D000A62D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,8 +41,6 @@
 		EDAF319B1681799D000A62D9 /* OKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OKViewController.h; sourceTree = "<group>"; };
 		EDAF319C1681799D000A62D9 /* OKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OKViewController.m; sourceTree = "<group>"; };
 		EDAF319F1681799D000A62D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OKViewController.xib; sourceTree = "<group>"; };
-		EDAF31A6168179B4000A62D9 /* CAAnimation+EasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+EasingEquations.h"; sourceTree = "<group>"; };
-		EDAF31A7168179B4000A62D9 /* CAAnimation+EasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+EasingEquations.m"; sourceTree = "<group>"; };
 		EDAF31A9168179C6000A62D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -91,13 +91,13 @@
 		EDAF31891681799D000A62D9 /* OKEasingFunctions */ = {
 			isa = PBXGroup;
 			children = (
+				ED5D3718168403A30073DA10 /* CAAnimation+EasingEquations.h */,
+				ED5D3719168403A30073DA10 /* CAAnimation+EasingEquations.m */,
 				EDAF31921681799D000A62D9 /* OKAppDelegate.h */,
 				EDAF31931681799D000A62D9 /* OKAppDelegate.m */,
 				EDAF319B1681799D000A62D9 /* OKViewController.h */,
 				EDAF319C1681799D000A62D9 /* OKViewController.m */,
 				EDAF319E1681799D000A62D9 /* OKViewController.xib */,
-				EDAF31A6168179B4000A62D9 /* CAAnimation+EasingEquations.h */,
-				EDAF31A7168179B4000A62D9 /* CAAnimation+EasingEquations.m */,
 			);
 			path = OKEasingFunctions;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 				EDAF31901681799D000A62D9 /* main.m in Sources */,
 				EDAF31941681799D000A62D9 /* OKAppDelegate.m in Sources */,
 				EDAF319D1681799D000A62D9 /* OKViewController.m in Sources */,
-				EDAF31A8168179B4000A62D9 /* CAAnimation+EasingEquations.m in Sources */,
+				ED5D371A168403A30073DA10 /* CAAnimation+EasingEquations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +304,7 @@
 				EDAF31A51681799D000A62D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
