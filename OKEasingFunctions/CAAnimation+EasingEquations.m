@@ -316,6 +316,20 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
 + (void)addAnimationToLayer:(CALayer *)layer
                 withKeyPath:(NSString *)keyPath
                    duration:(CGFloat)duration
+                         to:(CGFloat)endValue
+             easingFunction:(CAAnimationEasingFuction)easingFunction
+{
+    CAAnimation *animation = [self animationWithKeyPath:keyPath
+                                               duration:duration
+                                                   from:[[layer valueForKeyPath:keyPath] floatValue]
+                                                     to:endValue
+                                         easingFunction:easingFunction];
+    [layer addAnimation:animation forKey:nil];
+}
+
++ (void)addAnimationToLayer:(CALayer *)layer
+                withKeyPath:(NSString *)keyPath
+                   duration:(CGFloat)duration
                        from:(CGFloat)startValue
                          to:(CGFloat)endValue
              easingFunction:(CAAnimationEasingFuction)easingFunction

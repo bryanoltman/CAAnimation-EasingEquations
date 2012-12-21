@@ -60,6 +60,12 @@ typedef NS_ENUM(NSInteger, CAAnimationEasingFuction) {
 + (void)addAnimationToLayer:(CALayer *)layer
                 withKeyPath:(NSString *)keyPath
                    duration:(CGFloat)duration
+                         to:(CGFloat)endValue
+             easingFunction:(CAAnimationEasingFuction)easingFunction;
+
++ (void)addAnimationToLayer:(CALayer *)layer
+                withKeyPath:(NSString *)keyPath
+                   duration:(CGFloat)duration
                        from:(CGFloat)startValue
                          to:(CGFloat)endValue
              easingFunction:(CAAnimationEasingFuction)easingFunction;
