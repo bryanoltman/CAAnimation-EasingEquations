@@ -243,46 +243,45 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
     static NSDictionary *easingFunctionsToBlocks = nil;
     if (!easingFunctionsToBlocks) {
         easingFunctionsToBlocks = @{
-        
-        @(CAAnimationEasingFuctionEaseInQuad) : easeInQuad,
-        @(CAAnimationEasingFuctionEaseOutQuad) : easeOutQuad,
-        @(CAAnimationEasingFuctionEaseInOutQuad) : easeInOutQuad,
-        
-        @(CAAnimationEasingFuctionEaseInCubic) : easeInCubic,
-        @(CAAnimationEasingFuctionEaseOutCubic) : easeOutCubic,
-        @(CAAnimationEasingFuctionEaseInOutCubic) : easeInOutCubic,
-        
-        @(CAAnimationEasingFuctionEaseInQuartic) : easeInQuart,
-        @(CAAnimationEasingFuctionEaseOutQuartic) : easeOutQuart,
-        @(CAAnimationEasingFuctionEaseInOutQuartic) : easeInOutQuart,
-        
-        @(CAAnimationEasingFuctionEaseInQuintic) : easeInQuint,
-        @(CAAnimationEasingFuctionEaseOutQuintic) : easeOutQuint,
-        @(CAAnimationEasingFuctionEaseInOutQuintic) : easeInOutQuint,
-        
-        @(CAAnimationEasingFuctionEaseInSine) : easeInSine,
-        @(CAAnimationEasingFuctionEaseOutSine) : easeOutSine,
-        @(CAAnimationEasingFuctionEaseInOutSine) : easeInOutSine,
-        
-        @(CAAnimationEasingFuctionEaseInExponential) : easeInExpo,
-        @(CAAnimationEasingFuctionEaseOutExponential) : easeOutExpo,
-        @(CAAnimationEasingFuctionEaseInOutExponential) : easeInOutExpo,
-        
-        @(CAAnimationEasingFuctionEaseInCircular) : easeInCirc,
-        @(CAAnimationEasingFuctionEaseOutCircular) : easeOutCirc,
-        @(CAAnimationEasingFuctionEaseInOutCircular) : easeInOutCirc,
-        
-        @(CAAnimationEasingFuctionEaseInElastic) : easeInElastic,
-        @(CAAnimationEasingFuctionEaseOutElastic) : easeOutElastic,
-        @(CAAnimationEasingFuctionEaseInOutElastic) : easeInOutElastic,
-        
-        @(CAAnimationEasingFuctionEaseInBack) : easeInBack,
-        @(CAAnimationEasingFuctionEaseOutBack) : easeOutBack,
-        @(CAAnimationEasingFuctionEaseInOutBack) : easeInOutBack,
-        
-        @(CAAnimationEasingFuctionEaseInBounce) : easeInBounce,
-        @(CAAnimationEasingFuctionEaseOutBounce) : easeOutBounce,
-        @(CAAnimationEasingFuctionEaseInOutBounce) : easeInOutBounce
+            @(CAAnimationEasingFuctionEaseInQuad) : easeInQuad,
+            @(CAAnimationEasingFuctionEaseOutQuad) : easeOutQuad,
+            @(CAAnimationEasingFuctionEaseInOutQuad) : easeInOutQuad,
+            
+            @(CAAnimationEasingFuctionEaseInCubic) : easeInCubic,
+            @(CAAnimationEasingFuctionEaseOutCubic) : easeOutCubic,
+            @(CAAnimationEasingFuctionEaseInOutCubic) : easeInOutCubic,
+            
+            @(CAAnimationEasingFuctionEaseInQuartic) : easeInQuart,
+            @(CAAnimationEasingFuctionEaseOutQuartic) : easeOutQuart,
+            @(CAAnimationEasingFuctionEaseInOutQuartic) : easeInOutQuart,
+            
+            @(CAAnimationEasingFuctionEaseInQuintic) : easeInQuint,
+            @(CAAnimationEasingFuctionEaseOutQuintic) : easeOutQuint,
+            @(CAAnimationEasingFuctionEaseInOutQuintic) : easeInOutQuint,
+            
+            @(CAAnimationEasingFuctionEaseInSine) : easeInSine,
+            @(CAAnimationEasingFuctionEaseOutSine) : easeOutSine,
+            @(CAAnimationEasingFuctionEaseInOutSine) : easeInOutSine,
+            
+            @(CAAnimationEasingFuctionEaseInExponential) : easeInExpo,
+            @(CAAnimationEasingFuctionEaseOutExponential) : easeOutExpo,
+            @(CAAnimationEasingFuctionEaseInOutExponential) : easeInOutExpo,
+            
+            @(CAAnimationEasingFuctionEaseInCircular) : easeInCirc,
+            @(CAAnimationEasingFuctionEaseOutCircular) : easeOutCirc,
+            @(CAAnimationEasingFuctionEaseInOutCircular) : easeInOutCirc,
+            
+            @(CAAnimationEasingFuctionEaseInElastic) : easeInElastic,
+            @(CAAnimationEasingFuctionEaseOutElastic) : easeOutElastic,
+            @(CAAnimationEasingFuctionEaseInOutElastic) : easeInOutElastic,
+            
+            @(CAAnimationEasingFuctionEaseInBack) : easeInBack,
+            @(CAAnimationEasingFuctionEaseOutBack) : easeOutBack,
+            @(CAAnimationEasingFuctionEaseInOutBack) : easeInOutBack,
+            
+            @(CAAnimationEasingFuctionEaseInBounce) : easeInBounce,
+            @(CAAnimationEasingFuctionEaseOutBounce) : easeOutBounce,
+            @(CAAnimationEasingFuctionEaseInOutBounce) : easeInOutBounce
         };
     }
     
