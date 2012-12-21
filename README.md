@@ -3,6 +3,11 @@ CAAnimation-EasingEquations
 
 A category on `CAAnimation` that provides a number of easing equations to add some zazz to your app (with examples!)
 
+## Why?
+Because adding easing to animations makes them more realistic. UIKit provides a very limited set of easing functions, so I added a few more.
+
+[Easings.net][0] provides some good examples and further explanation.
+
 ## To use
 - Link your build target with `QuartzCore`
 	- Select your project in Xcode's project navigator
@@ -24,3 +29,5 @@ Because this uses CoreAnimation, animations are applied to `CALayer` objects. Fo
 ```
 
 In this example, the bounce ease-in function would be used.
+
+[0]: http://easings.net/
