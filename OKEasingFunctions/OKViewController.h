@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OKViewController : UIViewController
+@interface OKViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *animatedView;
+
+- (IBAction)playButtonClicked:(id)sender;
 
 @end

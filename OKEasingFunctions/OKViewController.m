@@ -7,23 +7,34 @@
 //
 
 #import "OKViewController.h"
-
-@interface OKViewController ()
-
-@end
+#import "CAAnimation+EasingEquations.h"
 
 @implementation OKViewController
 
-- (void)viewDidLoad
+#pragma mark - IBActions
+- (void)playButtonClicked:(id)sender
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Resettin' thangs
+    CGRect frame = self.animatedView.frame;
+    frame.origin.x = 20;
+    self.animatedView.frame = frame;
+    
+    [CAAnimation addAnimationToLayer:self.animatedView.layer
+                         withKeyPath:@"position.x"
+                            duration:1
+                                  to:250
+                      easingFunction:CAAnimationEasingFuctionEaseInBounce];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - UIPickerViewDataSource/Delegate
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return 0;
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 0;
 }
 
 @end
