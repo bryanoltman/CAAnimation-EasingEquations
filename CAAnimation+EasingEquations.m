@@ -238,50 +238,50 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
 
 @implementation CAAnimation (EasingEquations)
 
-+ (EasingFunction)blockForCAAnimationEasingFunction:(CAAnimationEasingFuction)easingFunction
++ (EasingFunction)blockForCAAnimationEasingFunction:(CAAnimationEasingFunction)easingFunction
 {
     static NSDictionary *easingFunctionsToBlocks = nil;
     if (!easingFunctionsToBlocks) {
         easingFunctionsToBlocks = @{
-            @(CAAnimationEasingFuctionEaseInQuad) : easeInQuad,
-            @(CAAnimationEasingFuctionEaseOutQuad) : easeOutQuad,
-            @(CAAnimationEasingFuctionEaseInOutQuad) : easeInOutQuad,
+            @(CAAnimationEasingFunctionEaseInQuad) : easeInQuad,
+            @(CAAnimationEasingFunctionEaseOutQuad) : easeOutQuad,
+            @(CAAnimationEasingFunctionEaseInOutQuad) : easeInOutQuad,
             
-            @(CAAnimationEasingFuctionEaseInCubic) : easeInCubic,
-            @(CAAnimationEasingFuctionEaseOutCubic) : easeOutCubic,
-            @(CAAnimationEasingFuctionEaseInOutCubic) : easeInOutCubic,
+            @(CAAnimationEasingFunctionEaseInCubic) : easeInCubic,
+            @(CAAnimationEasingFunctionEaseOutCubic) : easeOutCubic,
+            @(CAAnimationEasingFunctionEaseInOutCubic) : easeInOutCubic,
             
-            @(CAAnimationEasingFuctionEaseInQuartic) : easeInQuart,
-            @(CAAnimationEasingFuctionEaseOutQuartic) : easeOutQuart,
-            @(CAAnimationEasingFuctionEaseInOutQuartic) : easeInOutQuart,
+            @(CAAnimationEasingFunctionEaseInQuartic) : easeInQuart,
+            @(CAAnimationEasingFunctionEaseOutQuartic) : easeOutQuart,
+            @(CAAnimationEasingFunctionEaseInOutQuartic) : easeInOutQuart,
             
-            @(CAAnimationEasingFuctionEaseInQuintic) : easeInQuint,
-            @(CAAnimationEasingFuctionEaseOutQuintic) : easeOutQuint,
-            @(CAAnimationEasingFuctionEaseInOutQuintic) : easeInOutQuint,
+            @(CAAnimationEasingFunctionEaseInQuintic) : easeInQuint,
+            @(CAAnimationEasingFunctionEaseOutQuintic) : easeOutQuint,
+            @(CAAnimationEasingFunctionEaseInOutQuintic) : easeInOutQuint,
             
-            @(CAAnimationEasingFuctionEaseInSine) : easeInSine,
-            @(CAAnimationEasingFuctionEaseOutSine) : easeOutSine,
-            @(CAAnimationEasingFuctionEaseInOutSine) : easeInOutSine,
+            @(CAAnimationEasingFunctionEaseInSine) : easeInSine,
+            @(CAAnimationEasingFunctionEaseOutSine) : easeOutSine,
+            @(CAAnimationEasingFunctionEaseInOutSine) : easeInOutSine,
             
-            @(CAAnimationEasingFuctionEaseInExponential) : easeInExpo,
-            @(CAAnimationEasingFuctionEaseOutExponential) : easeOutExpo,
-            @(CAAnimationEasingFuctionEaseInOutExponential) : easeInOutExpo,
+            @(CAAnimationEasingFunctionEaseInExponential) : easeInExpo,
+            @(CAAnimationEasingFunctionEaseOutExponential) : easeOutExpo,
+            @(CAAnimationEasingFunctionEaseInOutExponential) : easeInOutExpo,
             
-            @(CAAnimationEasingFuctionEaseInCircular) : easeInCirc,
-            @(CAAnimationEasingFuctionEaseOutCircular) : easeOutCirc,
-            @(CAAnimationEasingFuctionEaseInOutCircular) : easeInOutCirc,
+            @(CAAnimationEasingFunctionEaseInCircular) : easeInCirc,
+            @(CAAnimationEasingFunctionEaseOutCircular) : easeOutCirc,
+            @(CAAnimationEasingFunctionEaseInOutCircular) : easeInOutCirc,
             
-            @(CAAnimationEasingFuctionEaseInElastic) : easeInElastic,
-            @(CAAnimationEasingFuctionEaseOutElastic) : easeOutElastic,
-            @(CAAnimationEasingFuctionEaseInOutElastic) : easeInOutElastic,
+            @(CAAnimationEasingFunctionEaseInElastic) : easeInElastic,
+            @(CAAnimationEasingFunctionEaseOutElastic) : easeOutElastic,
+            @(CAAnimationEasingFunctionEaseInOutElastic) : easeInOutElastic,
             
-            @(CAAnimationEasingFuctionEaseInBack) : easeInBack,
-            @(CAAnimationEasingFuctionEaseOutBack) : easeOutBack,
-            @(CAAnimationEasingFuctionEaseInOutBack) : easeInOutBack,
+            @(CAAnimationEasingFunctionEaseInBack) : easeInBack,
+            @(CAAnimationEasingFunctionEaseOutBack) : easeOutBack,
+            @(CAAnimationEasingFunctionEaseInOutBack) : easeInOutBack,
             
-            @(CAAnimationEasingFuctionEaseInBounce) : easeInBounce,
-            @(CAAnimationEasingFuctionEaseOutBounce) : easeOutBounce,
-            @(CAAnimationEasingFuctionEaseInOutBounce) : easeInOutBounce
+            @(CAAnimationEasingFunctionEaseInBounce) : easeInBounce,
+            @(CAAnimationEasingFunctionEaseOutBounce) : easeOutBounce,
+            @(CAAnimationEasingFunctionEaseInOutBounce) : easeInOutBounce
         };
     }
     
@@ -292,7 +292,7 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
                                     duration:(CGFloat)duration
                                         from:(CGFloat)startValue
                                           to:(CGFloat)endValue
-                              easingFunction:(CAAnimationEasingFuction)easingFunction
+                              easingFunction:(CAAnimationEasingFunction)easingFunction
 {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:keyPath];
     animation.duration = duration;
@@ -316,7 +316,7 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
                 withKeyPath:(NSString *)keyPath
                    duration:(CGFloat)duration
                          to:(CGFloat)endValue
-             easingFunction:(CAAnimationEasingFuction)easingFunction
+             easingFunction:(CAAnimationEasingFunction)easingFunction
 {
     CAAnimation *animation = [self animationWithKeyPath:keyPath
                                                duration:duration
@@ -331,7 +331,7 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
                    duration:(CGFloat)duration
                        from:(CGFloat)startValue
                          to:(CGFloat)endValue
-             easingFunction:(CAAnimationEasingFuction)easingFunction
+             easingFunction:(CAAnimationEasingFunction)easingFunction
 {
     CAAnimation *animation = [self animationWithKeyPath:keyPath
                                                duration:duration

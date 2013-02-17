@@ -60,7 +60,7 @@
     frame.origin.x = 20;
     self.animatedView.frame = frame;
     
-    CAAnimationEasingFuction selectedEasingFunction = (CAAnimationEasingFuction)[self.pickerView selectedRowInComponent:0];
+    CAAnimationEasingFunction selectedEasingFunction = (CAAnimationEasingFunction)[self.pickerView selectedRowInComponent:0];
     
     [CAAnimation addAnimationToLayer:self.animatedView.layer
                          withKeyPath:@"position.x"
