@@ -8,46 +8,46 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-typedef NS_ENUM(NSInteger, CAAnimationEasingFuction) {
-    CAAnimationEasingFuctionEaseInQuad,
-    CAAnimationEasingFuctionEaseOutQuad,
-    CAAnimationEasingFuctionEaseInOutQuad,
+typedef NS_ENUM(NSInteger, CAAnimationEasingFunction) {
+    CAAnimationEasingFunctionEaseInQuad,
+    CAAnimationEasingFunctionEaseOutQuad,
+    CAAnimationEasingFunctionEaseInOutQuad,
     
-    CAAnimationEasingFuctionEaseInCubic,
-    CAAnimationEasingFuctionEaseOutCubic,
-    CAAnimationEasingFuctionEaseInOutCubic,
+    CAAnimationEasingFunctionEaseInCubic,
+    CAAnimationEasingFunctionEaseOutCubic,
+    CAAnimationEasingFunctionEaseInOutCubic,
     
-    CAAnimationEasingFuctionEaseInQuartic,
-    CAAnimationEasingFuctionEaseOutQuartic,
-    CAAnimationEasingFuctionEaseInOutQuartic,
+    CAAnimationEasingFunctionEaseInQuartic,
+    CAAnimationEasingFunctionEaseOutQuartic,
+    CAAnimationEasingFunctionEaseInOutQuartic,
 
-    CAAnimationEasingFuctionEaseInQuintic,
-    CAAnimationEasingFuctionEaseOutQuintic,
-    CAAnimationEasingFuctionEaseInOutQuintic,
+    CAAnimationEasingFunctionEaseInQuintic,
+    CAAnimationEasingFunctionEaseOutQuintic,
+    CAAnimationEasingFunctionEaseInOutQuintic,
 
-    CAAnimationEasingFuctionEaseInSine,
-    CAAnimationEasingFuctionEaseOutSine,
-    CAAnimationEasingFuctionEaseInOutSine,
+    CAAnimationEasingFunctionEaseInSine,
+    CAAnimationEasingFunctionEaseOutSine,
+    CAAnimationEasingFunctionEaseInOutSine,
 
-    CAAnimationEasingFuctionEaseInExponential,
-    CAAnimationEasingFuctionEaseOutExponential,
-    CAAnimationEasingFuctionEaseInOutExponential,
+    CAAnimationEasingFunctionEaseInExponential,
+    CAAnimationEasingFunctionEaseOutExponential,
+    CAAnimationEasingFunctionEaseInOutExponential,
 
-    CAAnimationEasingFuctionEaseInCircular,
-    CAAnimationEasingFuctionEaseOutCircular,
-    CAAnimationEasingFuctionEaseInOutCircular,
+    CAAnimationEasingFunctionEaseInCircular,
+    CAAnimationEasingFunctionEaseOutCircular,
+    CAAnimationEasingFunctionEaseInOutCircular,
 
-    CAAnimationEasingFuctionEaseInElastic,
-    CAAnimationEasingFuctionEaseOutElastic,
-    CAAnimationEasingFuctionEaseInOutElastic,
+    CAAnimationEasingFunctionEaseInElastic,
+    CAAnimationEasingFunctionEaseOutElastic,
+    CAAnimationEasingFunctionEaseInOutElastic,
     
-    CAAnimationEasingFuctionEaseInBack,
-    CAAnimationEasingFuctionEaseOutBack,
-    CAAnimationEasingFuctionEaseInOutBack,
+    CAAnimationEasingFunctionEaseInBack,
+    CAAnimationEasingFunctionEaseOutBack,
+    CAAnimationEasingFunctionEaseInOutBack,
 
-    CAAnimationEasingFuctionEaseInBounce,
-    CAAnimationEasingFuctionEaseOutBounce,
-    CAAnimationEasingFuctionEaseInOutBounce
+    CAAnimationEasingFunctionEaseInBounce,
+    CAAnimationEasingFunctionEaseOutBounce,
+    CAAnimationEasingFunctionEaseInOutBounce
 };
 
 @interface CAAnimation (EasingEquations)
@@ -55,18 +55,18 @@ typedef NS_ENUM(NSInteger, CAAnimationEasingFuction) {
                                     duration:(CGFloat)duration
                                         from:(CGFloat)startValue
                                           to:(CGFloat)endValue
-                              easingFunction:(CAAnimationEasingFuction)easingFunction;
+                              easingFunction:(CAAnimationEasingFunction)easingFunction;
 
 + (void)addAnimationToLayer:(CALayer *)layer
                 withKeyPath:(NSString *)keyPath
                    duration:(CGFloat)duration
                          to:(CGFloat)endValue
-             easingFunction:(CAAnimationEasingFuction)easingFunction;
+             easingFunction:(CAAnimationEasingFunction)easingFunction;
 
 + (void)addAnimationToLayer:(CALayer *)layer
                 withKeyPath:(NSString *)keyPath
                    duration:(CGFloat)duration
                        from:(CGFloat)startValue
                          to:(CGFloat)endValue
-             easingFunction:(CAAnimationEasingFuction)easingFunction;
+             easingFunction:(CAAnimationEasingFunction)easingFunction;
 @end
