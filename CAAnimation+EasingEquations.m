@@ -12,6 +12,12 @@
 // equation implementations
 typedef CGFloat (^EasingFunction)(CGFloat, CGFloat, CGFloat, CGFloat);
 
+// Generally:
+//  t: current time
+//  b: beginning value
+//  c: change in value
+//  d: duration
+
 ///////////// QUADRATIC EASING: t^2 ///////////////////
 static EasingFunction easeInQuad = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
     return c * (t /= d) * t + b;
@@ -308,6 +314,7 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
         [values addObject:@(function(animation.duration * (t / steps), startValue, delta, animation.duration))];
     }
     
+    [values addObject:@(endValue)];
     animation.values = values;
     return animation;
 }
