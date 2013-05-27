@@ -38,10 +38,10 @@ Similarly to above, if we wanted to apply a transform to `animatedView`, we coul
     CATransform3D tr;
     tr = CATransform3DMakeScale(2.5, 2.5, 1.0);
     tr = CATransform3DTranslate(tr, 95, 0, 0);
-            [CAAnimation addAnimationToLayer:animatedView.layer
-                                duration:d
-                               transform:tr
-                          easingFunction:f];
+    [CAAnimation addAnimationToLayer:animatedView.layer
+                            duration:d
+                           transform:tr
+                      easingFunction:f];
 ```
 
 This would scale `animatedView` to 2.5x its current size and translate it 95px to the right. 
