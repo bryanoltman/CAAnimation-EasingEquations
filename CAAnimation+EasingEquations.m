@@ -7,6 +7,7 @@
 //
 
 #import "CAAnimation+EasingEquations.h"
+#import "NSObject+PerformBlockAfterDelay.h"
 
 #define kAnimationStops 250
 
@@ -387,6 +388,10 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
                                                                to:transform
                                                    easingFunction:easingFunction];
     [layer addAnimation:animation forKey:nil];
+    
+    [self performBlock:^{
+        layer.transform = transform;
+    } afterDelay:duration];
 }
 
 + (CAKeyframeAnimation*)animationWithKeyPath:(NSString*)keyPath
@@ -426,6 +431,10 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
                                                      to:endValue
                                          easingFunction:easingFunction];
     [layer addAnimation:animation forKey:nil];
+    
+    [self performBlock:^{
+        [layer setValue:@(endValue) forKey:keyPath];
+    } afterDelay:duration];
 }
 
 + (void)addAnimationToLayer:(CALayer *)layer
@@ -441,6 +450,10 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
                                                      to:endValue
                                          easingFunction:easingFunction];
     [layer addAnimation:animation forKey:nil];
+    
+    [self performBlock:^{
+        [layer setValue:@(endValue) forKey:keyPath];
+    } afterDelay:duration];
 }
 
 @end

@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (PerformBlockAfterDelay)
++ (void)performBlock:(void (^)(void))block
+          afterDelay:(NSTimeInterval)delay;
 - (void)performBlock:(void (^)(void))block
           afterDelay:(NSTimeInterval)delay;
-
 @end
