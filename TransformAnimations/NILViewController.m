@@ -14,43 +14,51 @@
 {
     [super viewDidLoad];
     
-    UISwipeGestureRecognizer *recognizer =
-    [[UISwipeGestureRecognizer alloc] initWithTarget:self
-                                              action:@selector(viewSwiped:)];
-    
+    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                     action:@selector(viewSwiped:)];
     recognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.leftTableView addGestureRecognizer:recognizer];
     
-    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(viewSwiped:)];
+    recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                           action:@selector(viewSwiped:)];
     recognizer.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.leftTableView addGestureRecognizer:recognizer];
+    [self.rightTableView addGestureRecognizer:recognizer];
     
     self.rightTableView.frame = CGRectOffset(self.rightTableView.frame, self.view.frame.size.width, 0);
 }
 
 - (void)viewSwiped:(UISwipeGestureRecognizer *)sender
 {
-    CAAnimationEasingFunction f = CAAnimationEasingFunctionEaseOutBounce;
+    CAAnimationEasingFunction f = CAAnimationEasingFunctionEaseOutBack;
     CGFloat d = 0.33;
     if (sender.direction == UISwipeGestureRecognizerDirectionLeft &&
         sender.view == self.leftTableView) {
         CATransform3D tr;
+        
+        // An example of how to "stack" transforms
         tr = CATransform3DMakeScale(2.5, 2.5, 1.0);
         tr = CATransform3DTranslate(tr, 95, 0, 0);
         [self addAnimationToView:self.leftTableView
                         duration:d
-                       transform:tr
+//                     transform:tr
 //                     transform:CATransform3DMakeRotation(250, 0, 0, 1)
-//                     transform:CATransform3DMakeTranslation(10, 0, 200)
+                     transform:CATransform3DMakeTranslation(-self.view.bounds.size.width, 0, 0)
                   easingFunction:f];
-        [CAAnimation addAnimationToLayer:self.leftTableView.layer withKeyPath:@"opacity" duration:d to:1 easingFunction:f];
+        [self addAnimationToView:self.rightTableView
+                        duration:d
+                       transform:CATransform3DMakeTranslation(-self.view.bounds.size.width, 0, 0)
+                  easingFunction:f];
     }
-    else if (sender.direction == UISwipeGestureRecognizerDirectionRight){
+    else if (sender.direction == UISwipeGestureRecognizerDirectionRight &&
+             sender.view == self.rightTableView) {
         [self addAnimationToView:self.leftTableView
                         duration:d
                        transform:CATransform3DIdentity
                   easingFunction:f];
-        [CAAnimation addAnimationToLayer:self.leftTableView.layer withKeyPath:@"opacity" duration:d to:0.5 easingFunction:f];
+        [self addAnimationToView:self.rightTableView
+                        duration:d
+                       transform:CATransform3DIdentity
+                  easingFunction:f];
     }
 }
 

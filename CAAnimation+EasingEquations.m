@@ -19,6 +19,8 @@ typedef CGFloat (^EasingFunction)(CGFloat, CGFloat, CGFloat, CGFloat);
 //  b: beginning value
 //  c: change in value
 //  d: duration
+//
+// Each of these equations returns the animated property's value at time t
 
 ///////////// QUADRATIC EASING: t^2 ///////////////////
 static EasingFunction easeInQuad = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
@@ -375,6 +377,18 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
     return animation;
 }
 
++ (void)addAnimationToLayer:(CALayer *)layer
+                   duration:(CGFloat)duration
+                  transform:(CATransform3D)transform
+             easingFunction:(CAAnimationEasingFunction)easingFunction
+{
+    CAAnimation *animation = [self transformAnimationWithDuration:duration
+                                                             from:layer.transform
+                                                               to:transform
+                                                   easingFunction:easingFunction];
+    [layer addAnimation:animation forKey:nil];
+}
+
 + (CAKeyframeAnimation*)animationWithKeyPath:(NSString*)keyPath
                                     duration:(CGFloat)duration
                                         from:(CGFloat)startValue
@@ -398,18 +412,6 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
     [values addObject:@(endValue)];
     animation.values = values;
     return animation;
-}
-
-+ (void)addAnimationToLayer:(CALayer *)layer
-                   duration:(CGFloat)duration
-                  transform:(CATransform3D)transform
-             easingFunction:(CAAnimationEasingFunction)easingFunction
-{
-    CAAnimation *animation = [self transformAnimationWithDuration:duration
-                                                             from:layer.transform
-                                                               to:transform
-                                                   easingFunction:easingFunction];
-    [layer addAnimation:animation forKey:nil];
 }
 
 + (void)addAnimationToLayer:(CALayer *)layer

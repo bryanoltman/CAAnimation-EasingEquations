@@ -51,16 +51,21 @@ typedef NS_ENUM(NSInteger, CAAnimationEasingFunction) {
 };
 
 @interface CAAnimation (EasingEquations)
-+ (CAKeyframeAnimation*)animationWithKeyPath:(NSString *)keyPath
-                                    duration:(CGFloat)duration
-                                        from:(CGFloat)startValue
-                                          to:(CGFloat)endValue
-                              easingFunction:(CAAnimationEasingFunction)easingFunction;
++ (CAKeyframeAnimation*)transformAnimationWithDuration:(CGFloat)duration
+                                                  from:(CATransform3D)startValue
+                                                    to:(CATransform3D)endValue
+                                        easingFunction:(CAAnimationEasingFunction)easingFunction;
 
 + (void)addAnimationToLayer:(CALayer *)layer
                    duration:(CGFloat)duration
                   transform:(CATransform3D)transform
              easingFunction:(CAAnimationEasingFunction)easingFunction;
+
++ (CAKeyframeAnimation*)animationWithKeyPath:(NSString *)keyPath
+                                    duration:(CGFloat)duration
+                                        from:(CGFloat)startValue
+                                          to:(CGFloat)endValue
+                              easingFunction:(CAAnimationEasingFunction)easingFunction;
 
 + (void)addAnimationToLayer:(CALayer *)layer
                 withKeyPath:(NSString *)keyPath
