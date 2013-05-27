@@ -20,6 +20,7 @@
 		EDAF319D1681799D000A62D9 /* OKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAF319C1681799D000A62D9 /* OKViewController.m */; };
 		EDAF31A01681799D000A62D9 /* OKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDAF319E1681799D000A62D9 /* OKViewController.xib */; };
 		EDAF31AA168179C6000A62D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDAF31A9168179C6000A62D9 /* QuartzCore.framework */; };
+		EDF89B2E1753E52600E0ABA7 /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF89B2D1753E52600E0ABA7 /* NSObject+PerformBlockAfterDelay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		EDAF319C1681799D000A62D9 /* OKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OKViewController.m; sourceTree = "<group>"; };
 		EDAF319F1681799D000A62D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OKViewController.xib; sourceTree = "<group>"; };
 		EDAF31A9168179C6000A62D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EDF89B2C1753E52600E0ABA7 /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = SOURCE_ROOT; };
+		EDF89B2D1753E52600E0ABA7 /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 		EDAF31891681799D000A62D9 /* OKEasingFunctions */ = {
 			isa = PBXGroup;
 			children = (
+				EDF89B2C1753E52600E0ABA7 /* NSObject+PerformBlockAfterDelay.h */,
+				EDF89B2D1753E52600E0ABA7 /* NSObject+PerformBlockAfterDelay.m */,
 				ED5D3718168403A30073DA10 /* CAAnimation+EasingEquations.h */,
 				ED5D3719168403A30073DA10 /* CAAnimation+EasingEquations.m */,
 				EDAF31921681799D000A62D9 /* OKAppDelegate.h */,
@@ -188,6 +193,7 @@
 				EDAF31941681799D000A62D9 /* OKAppDelegate.m in Sources */,
 				EDAF319D1681799D000A62D9 /* OKViewController.m in Sources */,
 				ED5D371A168403A30073DA10 /* CAAnimation+EasingEquations.m in Sources */,
+				EDF89B2E1753E52600E0ABA7 /* NSObject+PerformBlockAfterDelay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
