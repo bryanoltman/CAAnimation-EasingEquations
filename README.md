@@ -15,7 +15,7 @@ Because adding easing to animations makes them more realistic. UIKit provides a 
 	- Navigate to "Build Phases"
 	- In the "Link Binary with Libraries" section, click the '+' button
 	- Select `QuartzCore` and click "Add"
-- Add `CAAnimation+EasingEquations.h` and `CAAnimation+EasingEquations.m` to your project
+- Add `CAAnimation+EasingEquations.h/m` and `CAAnimation+NSObject+PerformBlockAfterDelay.h/m` to your project
 - Enjoy!
 
 ### Animating layer properties with key paths
@@ -45,6 +45,18 @@ Similarly to above, if we wanted to apply a transform to `animatedView`, we coul
 ```
 
 This would scale `animatedView` to 2.5x its current size and translate it 95px to the right. 
+
+## Examples
+
+Two sample projets have been included to illustrate the use of this category. 
+
+### OKEasingFunctions
+
+This illustrates the different easing functions. This was written before the addition of CATransform3D animation functions, so all animations are performed with key paths.
+
+### TransformAnimations
+
+This illustrates the CATransform3D additions. There are two tables, each with a swipe gesture recognizer. Swipe, and they animate. It's magic!
 
 ## License
 
