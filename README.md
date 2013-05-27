@@ -18,6 +18,7 @@ Because adding easing to animations makes them more realistic. UIKit provides a 
 - Add `CAAnimation+EasingEquations.h` and `CAAnimation+EasingEquations.m` to your project
 - Enjoy!
 
+### Animating layer properties with key paths
 Because this uses CoreAnimation, animations are applied to `CALayer` objects. For example, if we wanted a `UIView` to become completely transparent over the course of a second, the code to do that would look like this:
 
 ```
@@ -29,6 +30,21 @@ Because this uses CoreAnimation, animations are applied to `CALayer` objects. Fo
 ```
 
 In this example, the bounce ease-in function would be used.
+
+### Animating layer transforms
+Similarly to above, if we wanted to apply a transform to `animatedView`, we could do it like so:
+
+```
+    CATransform3D tr;
+    tr = CATransform3DMakeScale(2.5, 2.5, 1.0);
+    tr = CATransform3DTranslate(tr, 95, 0, 0);
+            [CAAnimation addAnimationToLayer:animatedView.layer
+                                duration:d
+                               transform:tr
+                          easingFunction:f];
+```
+
+This would scale `animatedView` to 2.5x its current size and translate it 95px to the right. 
 
 ## License
 
