@@ -8,9 +8,17 @@
 
 #import "CAAnimation+EasingEquations.h"
 
+#define kAnimationStops 250
+
 // Thanks to http://www.dzone.com/snippets/robert-penner-easing-equations for the easing
 // equation implementations
 typedef CGFloat (^EasingFunction)(CGFloat, CGFloat, CGFloat, CGFloat);
+
+// Generally:
+//  t: current time
+//  b: beginning value
+//  c: change in value
+//  d: duration
 
 ///////////// QUADRATIC EASING: t^2 ///////////////////
 static EasingFunction easeInQuad = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
@@ -288,6 +296,85 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
     return [easingFunctionsToBlocks objectForKey:@(easingFunction)];
 }
 
++ (CAKeyframeAnimation*)transformAnimationWithDuration:(CGFloat)duration
+                                                  from:(CATransform3D)startValue
+                                                    to:(CATransform3D)endValue
+                                        easingFunction:(CAAnimationEasingFunction)easingFunction
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    animation.duration = duration;
+    animation.fillMode = kCAFillModeForwards;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.removedOnCompletion = NO;
+    
+    NSMutableArray *values = [NSMutableArray arrayWithCapacity:kAnimationStops];
+    
+    CGFloat dm11 = endValue.m11 - startValue.m11;
+    CGFloat dm12 = endValue.m12 - startValue.m12;
+    CGFloat dm13 = endValue.m13 - startValue.m13;
+    CGFloat dm14 = endValue.m14 - startValue.m14;
+
+    CGFloat dm21 = endValue.m21 - startValue.m21;
+    CGFloat dm22 = endValue.m22 - startValue.m22;
+    CGFloat dm23 = endValue.m23 - startValue.m23;
+    CGFloat dm24 = endValue.m24 - startValue.m24;
+    
+    CGFloat dm31 = endValue.m31 - startValue.m31;
+    CGFloat dm32 = endValue.m32 - startValue.m32;
+    CGFloat dm33 = endValue.m33 - startValue.m33;
+    CGFloat dm34 = endValue.m34 - startValue.m34;
+
+    CGFloat dm41 = endValue.m41 - startValue.m41;
+    CGFloat dm42 = endValue.m42 - startValue.m42;
+    CGFloat dm43 = endValue.m43 - startValue.m43;
+    CGFloat dm44 = endValue.m44 - startValue.m44;
+    
+    EasingFunction function = [CAAnimation blockForCAAnimationEasingFunction:easingFunction];
+    for (CGFloat t = 0; t < kAnimationStops; t++) {
+        CATransform3D tr;
+        tr.m11 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m11, dm11, animation.duration);
+        tr.m12 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m12, dm12, animation.duration);
+        tr.m13 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m13, dm13, animation.duration);
+        tr.m14 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m14, dm14, animation.duration);
+        
+        tr.m21 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m21, dm21, animation.duration);
+        tr.m22 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m22, dm22, animation.duration);
+        tr.m23 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m23, dm23, animation.duration);
+        tr.m24 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m24, dm24, animation.duration);
+
+        tr.m31 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m31, dm31, animation.duration);
+        tr.m32 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m32, dm32, animation.duration);
+        tr.m33 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m33, dm33, animation.duration);
+        tr.m34 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m34, dm34, animation.duration);
+
+        tr.m41 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m41, dm41, animation.duration);
+        tr.m42 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m42, dm42, animation.duration);
+        tr.m43 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m43, dm43, animation.duration);
+        tr.m44 = function(animation.duration * (t / kAnimationStops),
+                          startValue.m44, dm44, animation.duration);
+        [values addObject:[NSValue valueWithCATransform3D:tr]];
+    }
+    
+    [values addObject:[NSValue valueWithCATransform3D:endValue]];
+    animation.values = values;
+    return animation;
+}
+
 + (CAKeyframeAnimation*)animationWithKeyPath:(NSString*)keyPath
                                     duration:(CGFloat)duration
                                         from:(CGFloat)startValue
@@ -300,16 +387,29 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     animation.removedOnCompletion = NO;
     
-    CGFloat steps = 100;
-    NSMutableArray *values = [NSMutableArray arrayWithCapacity:steps];
+    NSMutableArray *values = [NSMutableArray arrayWithCapacity:kAnimationStops];
     CGFloat delta = endValue - startValue;
     EasingFunction function = [CAAnimation blockForCAAnimationEasingFunction:easingFunction];
-    for (CGFloat t = 0; t < steps; t++) {
-        [values addObject:@(function(animation.duration * (t / steps), startValue, delta, animation.duration))];
+    for (CGFloat t = 0; t < kAnimationStops; t++) {
+        [values addObject:@(function(animation.duration * (t / kAnimationStops),
+                                     startValue, delta, animation.duration))];
     }
     
+    [values addObject:@(endValue)];
     animation.values = values;
     return animation;
+}
+
++ (void)addAnimationToLayer:(CALayer *)layer
+                   duration:(CGFloat)duration
+                  transform:(CATransform3D)transform
+             easingFunction:(CAAnimationEasingFunction)easingFunction
+{
+    CAAnimation *animation = [self transformAnimationWithDuration:duration
+                                                             from:layer.transform
+                                                               to:transform
+                                                   easingFunction:easingFunction];
+    [layer addAnimation:animation forKey:nil];
 }
 
 + (void)addAnimationToLayer:(CALayer *)layer

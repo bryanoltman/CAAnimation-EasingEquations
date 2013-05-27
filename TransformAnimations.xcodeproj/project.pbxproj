@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED3DB16117505BFA0088359E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3DB16017505BFA0088359E /* UIKit.framework */; };
+		ED3DB16317505BFA0088359E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3DB16217505BFA0088359E /* Foundation.framework */; };
+		ED3DB16517505BFA0088359E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3DB16417505BFA0088359E /* CoreGraphics.framework */; };
+		ED3DB18717505F320088359E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3DB18617505F320088359E /* QuartzCore.framework */; };
+		ED6F72011753D84D00358C95 /* TransformAnimations-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED76457D1753066B003552FA /* TransformAnimations-Info.plist */; };
+		ED6F72041753D85500358C95 /* NILViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6F72021753D85500358C95 /* NILViewController.xib */; };
+		ED76457F1753066B003552FA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7645701753066B003552FA /* Default-568h@2x.png */; };
+		ED7645801753066B003552FA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7645711753066B003552FA /* Default.png */; };
+		ED7645811753066B003552FA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7645721753066B003552FA /* Default@2x.png */; };
+		ED7645841753066B003552FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7645781753066B003552FA /* main.m */; };
+		ED7645851753066B003552FA /* NILAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED76457A1753066B003552FA /* NILAppDelegate.m */; };
+		ED7645861753066B003552FA /* NILViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED76457C1753066B003552FA /* NILViewController.m */; };
+		ED76458E175306AD003552FA /* CAAnimation+EasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = ED764589175306AD003552FA /* CAAnimation+EasingEquations.m */; };
+		ED76458F175306AD003552FA /* NSObject+EasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = ED76458B175306AD003552FA /* NSObject+EasingEquations.m */; };
+		ED764590175306AD003552FA /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = ED76458D175306AD003552FA /* NSObject+PerformBlockAfterDelay.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED3DB15D17505BFA0088359E /* TransformAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransformAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED3DB16017505BFA0088359E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ED3DB16217505BFA0088359E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED3DB16417505BFA0088359E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ED3DB18617505F320088359E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ED6F72031753D85500358C95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = TransformAnimations/en.lproj/NILViewController.xib; sourceTree = SOURCE_ROOT; };
+		ED7645701753066B003552FA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "TransformAnimations/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		ED7645711753066B003552FA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = TransformAnimations/Default.png; sourceTree = SOURCE_ROOT; };
+		ED7645721753066B003552FA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "TransformAnimations/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		ED7645781753066B003552FA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TransformAnimations/main.m; sourceTree = SOURCE_ROOT; };
+		ED7645791753066B003552FA /* NILAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NILAppDelegate.h; path = TransformAnimations/NILAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		ED76457A1753066B003552FA /* NILAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NILAppDelegate.m; path = TransformAnimations/NILAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		ED76457B1753066B003552FA /* NILViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NILViewController.h; path = TransformAnimations/NILViewController.h; sourceTree = SOURCE_ROOT; };
+		ED76457C1753066B003552FA /* NILViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NILViewController.m; path = TransformAnimations/NILViewController.m; sourceTree = SOURCE_ROOT; };
+		ED76457D1753066B003552FA /* TransformAnimations-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "TransformAnimations-Info.plist"; path = "TransformAnimations/TransformAnimations-Info.plist"; sourceTree = SOURCE_ROOT; };
+		ED76457E1753066B003552FA /* TransformAnimations-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TransformAnimations-Prefix.pch"; path = "TransformAnimations/TransformAnimations-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		ED764588175306AD003552FA /* CAAnimation+EasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+EasingEquations.h"; sourceTree = SOURCE_ROOT; };
+		ED764589175306AD003552FA /* CAAnimation+EasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+EasingEquations.m"; sourceTree = SOURCE_ROOT; };
+		ED76458A175306AD003552FA /* NSObject+EasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+EasingEquations.h"; sourceTree = SOURCE_ROOT; };
+		ED76458B175306AD003552FA /* NSObject+EasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EasingEquations.m"; sourceTree = SOURCE_ROOT; };
+		ED76458C175306AD003552FA /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = SOURCE_ROOT; };
+		ED76458D175306AD003552FA /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED3DB15A17505BFA0088359E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED3DB18717505F320088359E /* QuartzCore.framework in Frameworks */,
+				ED3DB16117505BFA0088359E /* UIKit.framework in Frameworks */,
+				ED3DB16317505BFA0088359E /* Foundation.framework in Frameworks */,
+				ED3DB16517505BFA0088359E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED3DB15417505BFA0088359E = {
+			isa = PBXGroup;
+			children = (
+				ED3DB16617505BFA0088359E /* TransformAnimations */,
+				ED3DB15F17505BFA0088359E /* Frameworks */,
+				ED3DB15E17505BFA0088359E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED3DB15E17505BFA0088359E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED3DB15D17505BFA0088359E /* TransformAnimations.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED3DB15F17505BFA0088359E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED3DB16417505BFA0088359E /* CoreGraphics.framework */,
+				ED3DB16217505BFA0088359E /* Foundation.framework */,
+				ED3DB18617505F320088359E /* QuartzCore.framework */,
+				ED3DB16017505BFA0088359E /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED3DB16617505BFA0088359E /* TransformAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				ED764588175306AD003552FA /* CAAnimation+EasingEquations.h */,
+				ED764589175306AD003552FA /* CAAnimation+EasingEquations.m */,
+				ED76458A175306AD003552FA /* NSObject+EasingEquations.h */,
+				ED76458B175306AD003552FA /* NSObject+EasingEquations.m */,
+				ED76458C175306AD003552FA /* NSObject+PerformBlockAfterDelay.h */,
+				ED76458D175306AD003552FA /* NSObject+PerformBlockAfterDelay.m */,
+				ED7645791753066B003552FA /* NILAppDelegate.h */,
+				ED76457A1753066B003552FA /* NILAppDelegate.m */,
+				ED76457B1753066B003552FA /* NILViewController.h */,
+				ED76457C1753066B003552FA /* NILViewController.m */,
+				ED6F72021753D85500358C95 /* NILViewController.xib */,
+				ED3DB16717505BFA0088359E /* Supporting Files */,
+			);
+			name = TransformAnimations;
+			path = "Bouncy Tables";
+			sourceTree = "<group>";
+		};
+		ED3DB16717505BFA0088359E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED7645701753066B003552FA /* Default-568h@2x.png */,
+				ED7645711753066B003552FA /* Default.png */,
+				ED7645721753066B003552FA /* Default@2x.png */,
+				ED7645781753066B003552FA /* main.m */,
+				ED76457D1753066B003552FA /* TransformAnimations-Info.plist */,
+				ED76457E1753066B003552FA /* TransformAnimations-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED3DB15C17505BFA0088359E /* TransformAnimations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED3DB18017505BFA0088359E /* Build configuration list for PBXNativeTarget "TransformAnimations" */;
+			buildPhases = (
+				ED3DB15917505BFA0088359E /* Sources */,
+				ED3DB15A17505BFA0088359E /* Frameworks */,
+				ED3DB15B17505BFA0088359E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransformAnimations;
+			productName = "Bouncy Tables";
+			productReference = ED3DB15D17505BFA0088359E /* TransformAnimations.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED3DB15517505BFA0088359E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NIL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Bryan Oltman";
+			};
+			buildConfigurationList = ED3DB15817505BFA0088359E /* Build configuration list for PBXProject "TransformAnimations" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED3DB15417505BFA0088359E;
+			productRefGroup = ED3DB15E17505BFA0088359E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED3DB15C17505BFA0088359E /* TransformAnimations */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED3DB15B17505BFA0088359E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED76457F1753066B003552FA /* Default-568h@2x.png in Resources */,
+				ED7645801753066B003552FA /* Default.png in Resources */,
+				ED7645811753066B003552FA /* Default@2x.png in Resources */,
+				ED6F72011753D84D00358C95 /* TransformAnimations-Info.plist in Resources */,
+				ED6F72041753D85500358C95 /* NILViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED3DB15917505BFA0088359E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED7645841753066B003552FA /* main.m in Sources */,
+				ED7645851753066B003552FA /* NILAppDelegate.m in Sources */,
+				ED7645861753066B003552FA /* NILViewController.m in Sources */,
+				ED76458E175306AD003552FA /* CAAnimation+EasingEquations.m in Sources */,
+				ED76458F175306AD003552FA /* NSObject+EasingEquations.m in Sources */,
+				ED764590175306AD003552FA /* NSObject+PerformBlockAfterDelay.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED6F72021753D85500358C95 /* NILViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED6F72031753D85500358C95 /* en */,
+			);
+			name = NILViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED3DB17E17505BFA0088359E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "TransformAnimations/TransformAnimations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED3DB17F17505BFA0088359E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "TransformAnimations/TransformAnimations-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED3DB18117505BFA0088359E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TransformAnimations/TransformAnimations-Prefix.pch";
+				INFOPLIST_FILE = "TransformAnimations/TransformAnimations-Info.plist";
+				PRODUCT_NAME = TransformAnimations;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ED3DB18217505BFA0088359E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TransformAnimations/TransformAnimations-Prefix.pch";
+				INFOPLIST_FILE = "TransformAnimations/TransformAnimations-Info.plist";
+				PRODUCT_NAME = TransformAnimations;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED3DB15817505BFA0088359E /* Build configuration list for PBXProject "TransformAnimations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3DB17E17505BFA0088359E /* Debug */,
+				ED3DB17F17505BFA0088359E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED3DB18017505BFA0088359E /* Build configuration list for PBXNativeTarget "TransformAnimations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED3DB18117505BFA0088359E /* Debug */,
+				ED3DB18217505BFA0088359E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED3DB15517505BFA0088359E /* Project object */;
+}
