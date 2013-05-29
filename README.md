@@ -15,7 +15,7 @@ Because adding easing to animations makes them more realistic. UIKit provides a 
 	- Navigate to "Build Phases"
 	- In the "Link Binary with Libraries" section, click the '+' button
 	- Select `QuartzCore` and click "Add"
-- Add `CAAnimation+EasingEquations.h/m` and `CAAnimation+NSObject+PerformBlockAfterDelay.h/m` to your project
+- Add `CAAnimation+EasingEquations.h/m` to your project
 - Enjoy!
 
 ### Animating layer properties with key paths
