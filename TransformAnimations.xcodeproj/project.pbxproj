@@ -19,7 +19,6 @@
 		ED7645851753066B003552FA /* NILAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED76457A1753066B003552FA /* NILAppDelegate.m */; };
 		ED7645861753066B003552FA /* NILViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED76457C1753066B003552FA /* NILViewController.m */; };
 		ED76458E175306AD003552FA /* CAAnimation+EasingEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = ED764589175306AD003552FA /* CAAnimation+EasingEquations.m */; };
-		ED764590175306AD003552FA /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = ED76458D175306AD003552FA /* NSObject+PerformBlockAfterDelay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +40,6 @@
 		ED76457E1753066B003552FA /* TransformAnimations-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "TransformAnimations-Prefix.pch"; path = "TransformAnimations/TransformAnimations-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		ED764588175306AD003552FA /* CAAnimation+EasingEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+EasingEquations.h"; sourceTree = SOURCE_ROOT; };
 		ED764589175306AD003552FA /* CAAnimation+EasingEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+EasingEquations.m"; sourceTree = SOURCE_ROOT; };
-		ED76458C175306AD003552FA /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = SOURCE_ROOT; };
-		ED76458D175306AD003552FA /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +90,6 @@
 			children = (
 				ED764588175306AD003552FA /* CAAnimation+EasingEquations.h */,
 				ED764589175306AD003552FA /* CAAnimation+EasingEquations.m */,
-				ED76458C175306AD003552FA /* NSObject+PerformBlockAfterDelay.h */,
-				ED76458D175306AD003552FA /* NSObject+PerformBlockAfterDelay.m */,
 				ED7645791753066B003552FA /* NILAppDelegate.h */,
 				ED76457A1753066B003552FA /* NILAppDelegate.m */,
 				ED76457B1753066B003552FA /* NILViewController.h */,
@@ -189,7 +184,6 @@
 				ED7645851753066B003552FA /* NILAppDelegate.m in Sources */,
 				ED7645861753066B003552FA /* NILViewController.m in Sources */,
 				ED76458E175306AD003552FA /* CAAnimation+EasingEquations.m in Sources */,
-				ED764590175306AD003552FA /* NSObject+PerformBlockAfterDelay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
