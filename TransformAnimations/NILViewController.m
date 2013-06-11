@@ -29,8 +29,8 @@
 
 - (void)viewSwiped:(UISwipeGestureRecognizer *)sender
 {
-    CAAnimationEasingFunction f = CAAnimationEasingFunctionEaseOutBack;
-    CGFloat d = 0.33;
+    CAAnimationEasingFunction f = CAAnimationEasingFunctionEaseOutElastic;
+    CGFloat d = 1;
     if (sender.direction == UISwipeGestureRecognizerDirectionLeft &&
         sender.view == self.leftTableView) {
         CATransform3D tr;
@@ -40,9 +40,9 @@
         tr = CATransform3DTranslate(tr, 95, 0, 0);
         [CAAnimation addAnimationToLayer:self.leftTableView.layer
                                 duration:d
-//                             transform:tr
+                             transform:tr
 //                             transform:CATransform3DMakeRotation(250, 0, 0, 1)
-                               transform:CATransform3DMakeTranslation(-self.view.bounds.size.width, 0, 0)
+//                               transform:CATransform3DMakeTranslation(-self.view.bounds.size.width, 0, 0)
                           easingFunction:f];
         [CAAnimation addAnimationToLayer:self.rightTableView.layer
                                 duration:d
