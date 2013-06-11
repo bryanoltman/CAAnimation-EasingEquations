@@ -123,6 +123,8 @@ static EasingFunction easeInOutCirc = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, 
 
 /////////// ELASTIC EASING: exponentially decaying sine wave  //////////////
 static EasingFunction easeInElastic = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
+    if (!c) return b;
+    
     CGFloat amplitude = 5;
     CGFloat period = 0.3;
     CGFloat s = 0;
@@ -147,6 +149,8 @@ static EasingFunction easeInElastic = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, 
 };
 
 static EasingFunction easeOutElastic = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
+    if (!c) return b;
+    
     CGFloat amplitude = 5;
     CGFloat period = 0.3;
     CGFloat s = 0;
@@ -173,6 +177,8 @@ static EasingFunction easeOutElastic = ^CGFloat(CGFloat t, CGFloat b, CGFloat c,
 };
 
 static EasingFunction easeInOutElastic = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
+    if (!c) return b;
+    
     CGFloat amplitude = 5;
     CGFloat period = 0.3;
     CGFloat s = 0;
@@ -421,13 +427,12 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
                          to:(CGFloat)endValue
              easingFunction:(CAAnimationEasingFunction)easingFunction
 {
-    CAAnimation *animation = [self animationWithKeyPath:keyPath
-                                               duration:duration
-                                                   from:[[layer valueForKeyPath:keyPath] floatValue]
-                                                     to:endValue
-                                         easingFunction:easingFunction];
-    [layer setValue:@(endValue) forKey:keyPath];
-    [layer addAnimation:animation forKey:nil];
+    [self addAnimationToLayer:layer
+                  withKeyPath:keyPath
+                     duration:duration
+                         from:[[layer valueForKeyPath:keyPath] floatValue]
+                           to:endValue
+               easingFunction:easingFunction];
 }
 
 + (void)addAnimationToLayer:(CALayer *)layer
@@ -442,8 +447,8 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
                                                    from:startValue
                                                      to:endValue
                                          easingFunction:easingFunction];
-    [layer setValue:@(endValue) forKey:keyPath];
     [layer addAnimation:animation forKey:nil];
+    [layer setValue:@(endValue) forKey:keyPath];
 }
 
 @end
