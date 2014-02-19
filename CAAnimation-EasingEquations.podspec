@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CAAnimation-EasingEquations"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "A category on CAAnimation that provides a number of easing equations to add some zazz to your app (with examples!)"
   s.description  = <<-DESC
 Adding easing to animations makes them more realistic. UIKit provides a very limited set of easing functions, so I added a few more.
@@ -11,7 +11,7 @@ Easings.net provides some good examples and further explanation.
   s.author             = { "Bryan" => "bryanoltman@gmail.com" }
   s.social_media_url = "http://twitter.com/moltman"
   s.platform     = :ios
-  s.source       = { :git => "https://github.com/bryanoltman/CAAnimation-EasingEquations.git", :commit => "600c97e3ec2f3af7581bc1a40c734b5560d590f1" }
+  s.source       = { :git => "https://github.com/bryanoltman/CAAnimation-EasingEquations.git", :commit => "d6a6d0706273cb7229551cbf0a5102e10fa193e0" }
   s.source_files  = '*.{h,m}'
   s.requires_arc = true
 
