@@ -9,6 +9,9 @@ Because adding easing to animations makes them more realistic. UIKit provides a 
 [Easings.net][0] provides some good examples and further explanation.
 
 ## To use
+- Add `pod 'CAAnimation-EasingEquations'` to your podfile
+
+### Or
 - Link your build target with `QuartzCore`
 	- Select your project in Xcode's project navigator
 	- Select your project's target
