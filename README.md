@@ -47,7 +47,7 @@ Similarly to above, if we wanted to apply a transform to `animatedView`, we coul
                       easingFunction:CAAnimationEasingFuctionEaseOutBack];
 ```
 
-This would scale `animatedView` to 2.5x its current size and translate it 95px to the right, also over the course of 1 second.
+This would scale `animatedView` to 2.5x its current size and translate it 95px to the right over the course of 1 second.
 
 ## Examples
 
