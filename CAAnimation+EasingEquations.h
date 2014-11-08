@@ -9,6 +9,8 @@
 #import <QuartzCore/QuartzCore.h>
 
 typedef NS_ENUM(NSInteger, CAAnimationEasingFunction) {
+    CAAnimationEasingFunctionLinear,
+    
     CAAnimationEasingFunctionEaseInQuad,
     CAAnimationEasingFunctionEaseOutQuad,
     CAAnimationEasingFunctionEaseInOutQuad,

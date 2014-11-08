@@ -21,6 +21,10 @@ typedef CGFloat (^EasingFunction)(CGFloat, CGFloat, CGFloat, CGFloat);
 //  d: duration
 //
 // Each of these equations returns the animated property's value at time t
+static EasingFunction linear = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
+    t /= d;
+    return c * t + b;
+};
 
 ///////////// QUADRATIC EASING: t^2 ///////////////////
 static EasingFunction easeInQuad = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
@@ -303,18 +307,18 @@ static EasingFunction easeOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, 
         t -= (2.25 / 2.75);
         return c * (7.5625 * t * t + 0.9375) + b;
     }
-
+    
     t -= (2.625 / 2.75);
     return c * (7.5625 * t * t + 0.984375) + b;
 };
 
 static EasingFunction easeInBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
-	return c - easeOutBounce(d-t, 0, c, d) + b;
+    return c - easeOutBounce(d-t, 0, c, d) + b;
 };
 
 static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, CGFloat d) {
-	if (t < d/2) return easeInBounce (t*2, 0, c, d) * .5 + b;
-	return easeOutBounce (t*2-d, 0, c, d) * .5 + c*.5 + b;
+    if (t < d/2) return easeInBounce (t*2, 0, c, d) * .5 + b;
+    return easeOutBounce (t*2-d, 0, c, d) * .5 + c*.5 + b;
 };
 
 
@@ -325,46 +329,48 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
     static NSDictionary *easingFunctionsToBlocks = nil;
     if (!easingFunctionsToBlocks) {
         easingFunctionsToBlocks = @{
-            @(CAAnimationEasingFunctionEaseInQuad) : easeInQuad,
-            @(CAAnimationEasingFunctionEaseOutQuad) : easeOutQuad,
-            @(CAAnimationEasingFunctionEaseInOutQuad) : easeInOutQuad,
-            
-            @(CAAnimationEasingFunctionEaseInCubic) : easeInCubic,
-            @(CAAnimationEasingFunctionEaseOutCubic) : easeOutCubic,
-            @(CAAnimationEasingFunctionEaseInOutCubic) : easeInOutCubic,
-            
-            @(CAAnimationEasingFunctionEaseInQuartic) : easeInQuart,
-            @(CAAnimationEasingFunctionEaseOutQuartic) : easeOutQuart,
-            @(CAAnimationEasingFunctionEaseInOutQuartic) : easeInOutQuart,
-            
-            @(CAAnimationEasingFunctionEaseInQuintic) : easeInQuint,
-            @(CAAnimationEasingFunctionEaseOutQuintic) : easeOutQuint,
-            @(CAAnimationEasingFunctionEaseInOutQuintic) : easeInOutQuint,
-            
-            @(CAAnimationEasingFunctionEaseInSine) : easeInSine,
-            @(CAAnimationEasingFunctionEaseOutSine) : easeOutSine,
-            @(CAAnimationEasingFunctionEaseInOutSine) : easeInOutSine,
-            
-            @(CAAnimationEasingFunctionEaseInExponential) : easeInExpo,
-            @(CAAnimationEasingFunctionEaseOutExponential) : easeOutExpo,
-            @(CAAnimationEasingFunctionEaseInOutExponential) : easeInOutExpo,
-            
-            @(CAAnimationEasingFunctionEaseInCircular) : easeInCirc,
-            @(CAAnimationEasingFunctionEaseOutCircular) : easeOutCirc,
-            @(CAAnimationEasingFunctionEaseInOutCircular) : easeInOutCirc,
-            
-            @(CAAnimationEasingFunctionEaseInElastic) : easeInElastic,
-            @(CAAnimationEasingFunctionEaseOutElastic) : easeOutElastic,
-            @(CAAnimationEasingFunctionEaseInOutElastic) : easeInOutElastic,
-            
-            @(CAAnimationEasingFunctionEaseInBack) : easeInBack,
-            @(CAAnimationEasingFunctionEaseOutBack) : easeOutBack,
-            @(CAAnimationEasingFunctionEaseInOutBack) : easeInOutBack,
-            
-            @(CAAnimationEasingFunctionEaseInBounce) : easeInBounce,
-            @(CAAnimationEasingFunctionEaseOutBounce) : easeOutBounce,
-            @(CAAnimationEasingFunctionEaseInOutBounce) : easeInOutBounce
-        };
+                                    @(CAAnimationEasingFunctionLinear) : linear,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInQuad) : easeInQuad,
+                                    @(CAAnimationEasingFunctionEaseOutQuad) : easeOutQuad,
+                                    @(CAAnimationEasingFunctionEaseInOutQuad) : easeInOutQuad,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInCubic) : easeInCubic,
+                                    @(CAAnimationEasingFunctionEaseOutCubic) : easeOutCubic,
+                                    @(CAAnimationEasingFunctionEaseInOutCubic) : easeInOutCubic,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInQuartic) : easeInQuart,
+                                    @(CAAnimationEasingFunctionEaseOutQuartic) : easeOutQuart,
+                                    @(CAAnimationEasingFunctionEaseInOutQuartic) : easeInOutQuart,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInQuintic) : easeInQuint,
+                                    @(CAAnimationEasingFunctionEaseOutQuintic) : easeOutQuint,
+                                    @(CAAnimationEasingFunctionEaseInOutQuintic) : easeInOutQuint,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInSine) : easeInSine,
+                                    @(CAAnimationEasingFunctionEaseOutSine) : easeOutSine,
+                                    @(CAAnimationEasingFunctionEaseInOutSine) : easeInOutSine,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInExponential) : easeInExpo,
+                                    @(CAAnimationEasingFunctionEaseOutExponential) : easeOutExpo,
+                                    @(CAAnimationEasingFunctionEaseInOutExponential) : easeInOutExpo,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInCircular) : easeInCirc,
+                                    @(CAAnimationEasingFunctionEaseOutCircular) : easeOutCirc,
+                                    @(CAAnimationEasingFunctionEaseInOutCircular) : easeInOutCirc,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInElastic) : easeInElastic,
+                                    @(CAAnimationEasingFunctionEaseOutElastic) : easeOutElastic,
+                                    @(CAAnimationEasingFunctionEaseInOutElastic) : easeInOutElastic,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInBack) : easeInBack,
+                                    @(CAAnimationEasingFunctionEaseOutBack) : easeOutBack,
+                                    @(CAAnimationEasingFunctionEaseInOutBack) : easeInOutBack,
+                                    
+                                    @(CAAnimationEasingFunctionEaseInBounce) : easeInBounce,
+                                    @(CAAnimationEasingFunctionEaseOutBounce) : easeOutBounce,
+                                    @(CAAnimationEasingFunctionEaseInOutBounce) : easeInOutBounce
+                                    };
     }
     
     return [easingFunctionsToBlocks objectForKey:@(easingFunction)];
