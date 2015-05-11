@@ -189,7 +189,7 @@ static EasingFunction easeInElastic = ^CGFloat(CGFloat t, CGFloat b, CGFloat c, 
         period = d * .3;
     }
     
-    if (amplitude < abs(c)) {
+    if (amplitude < fabs(c)) {
         amplitude = c;
         s = period / 4;
     }
@@ -220,7 +220,7 @@ static EasingFunction easeOutElastic = ^CGFloat(CGFloat t, CGFloat b, CGFloat c,
         period = d * .3;
     }
     
-    if (amplitude < abs(c)) {
+    if (amplitude < fabs(c)) {
         amplitude = c;
         s = period / 4;
     }
@@ -249,7 +249,7 @@ static EasingFunction easeInOutElastic = ^CGFloat(CGFloat t, CGFloat b, CGFloat 
         period = d * (.3 * 1.5);
     }
     
-    if (amplitude < abs(c)) {
+    if (amplitude < fabs(c)) {
         amplitude = c;
         s = period / 4;
     }
